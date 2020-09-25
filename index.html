@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEalog</title>
+    <title>DEalog - Staatliche Kommunikation</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script
       type="module"
@@ -15,8 +15,13 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
       defer
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
+  <body name="top">
     <header>
       <nav x-data="{ isOpen: false }" class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,33 +78,34 @@
                 </div>
                 <div class="hidden md:ml-6 md:flex space-x-12">
                   <a
-                    href="#"
+                    href="#buerger-innen"
                     class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
-                    F&uuml;r B&uuml;rger:innen
+                    Für Bürger:innen
                   </a>
                   <a
-                    href="#"
+                    href="#staat"
                     class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
-                    F&uuml;r den Staat
+                    Für den Staat
                   </a>
                   <a
-                    href="#"
+                    href="#projekt"
                     class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
-                    &Uuml;ber das Projekt
+                    Über das Projekt
                   </a>
                 </div>
               </div>
             </div>
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <button
+                <a
+                  href="#kontakt"
                   class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 rounded-md text-gray-100 bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-600 transition ease-in-out duration-150"
                 >
                   Kontakt
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -113,26 +119,27 @@
         >
           <div class="pt-2 pb-3">
             <a
-              href="#"
+              href="#buerger-innen"
               class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
-              F&uuml;r B&uuml;rger:innen
+              Für Bürger:innen
             </a>
             <a
-              href="#"
+              href="#staat"
               class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
-              F&uuml;r den Staat
+              Für den Staat
             </a>
             <a
-              href="#"
+              href="#projekt"
               class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
-              &Uuml;ber das Projekt
+              Über das Projekt
             </a>
+            <hr class="mt-4" />
             <a
-              href="#"
-              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+              href="#kontakt"
+              class="mt-4 block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
               Kontakt
             </a>
@@ -141,232 +148,273 @@
       </nav>
     </header>
     <main class="text-gray-900">
-      <section class="mt-32 w-3/4 mx-auto">
-        <h1 class="text-center text-5xl font-semibold">
-          Dein <span class="-mb-1 border-b-4 border-gray-900">Staat</span>.
-          Deine <span class="-mb-1 border-b-4 border-red-500">Infos</span>. Dein
-          <span class="-mb-1 border-b-4 border-yellow-300">DEalog</span>.
+      <section
+        class="mt-12 sm:mt-32 w-full sm:w-3/4 px-2 mx-0 sm:px-0 sm:mx-auto"
+      >
+        <h1
+          class="block sm:flex sm:flex-wrap sm:space-x-1 sm:justify-center text-center text-5xl font-semibold"
+        >
+          <p>
+            Dein <span class="-mb-1 border-b-4 border-gray-900">Staat</span>.
+          </p>
+          <p>
+            Deine <span class="-mb-1 border-b-4 border-red-500">Infos</span>.
+          </p>
+          <p>
+            Dein <span class="-mb-1 border-b-4 border-yellow-300">DEalog</span>.
+          </p>
         </h1>
         <p class="mt-16 text-gray-400 text-sm text-center">
-          Offizielle Krisenkommunikation f&uuml;r Staat und B&uuml;rger:innen
+          Offizielle Krisenkommunikation für Staat und Bürger:innen
         </p>
-        <div class="mt-16">
+        <div class="mt-12 sm:mt-16">
           <div
             class="flex justify-center space-x-4 text-gray-300 uppercase text-2xs font-light"
           >
             <div>
-              gef&ouml;rdert durch
+              gefördert durch
             </div>
             <div>
               in Kooperation mit
             </div>
           </div>
-          <div class="w-1/2 mx-auto">
+          <div class="object-cover w-full sm:w-1/2 mx-auto">
             <img src="images/sponsoren.png" title="Sponsore" alt="Sponsoren" />
           </div>
         </div>
         <div class="mt-24">
           <img src="images/side_visual.png" alt="DEalog" />
         </div>
-        <div class="mt-20 flex justify-between">
-          <h2 class="w-1/2 text-center text-2xl font-semibold">
-            Im Dialog mit den B&uuml;rger:innen: Staatliche Krisenkommunikation
+        <div class="mt-12 sm:mt-20 sm:flex sm:justify-between">
+          <h2 class="w-full sm:w-1/2 text-center text-2xl font-semibold">
+            <p>Im Dialog mit den Bürger:innen:</p>
+            <p>Staatliche Krisenkommunikation</p>
           </h2>
-          <div class="ml-4 w-1/2 text-sm text-gray-600 space-y-4">
+          <div
+            class="mt-8 sm:mt-0 px-4 sm:px-0 ml-0 sm:ml-4 w-full sm:w-1/2 text-lg sm:text-sm text-gray-600 space-y-4"
+          >
             <p>
-              F&uuml;r Menschen in informationsintensiven Krisenlagen in
-              Deutschland, die nach f&uuml;r sie relevante und
-              verl&auml;ssliche Informationen zu bereits kommunizierten Warn-
-              und Gefahrenmeldungen suchen, ist DEalog die zentrale und aus
-              beh&ouml;rdlichen Quellen gespeiste Informationsplattform.
+              Für Menschen in informationsintensiven Krisenlagen in Deutschland,
+              die nach für sie relevanten und verlässlichen Informationen zu
+              bereits kommunizierten Warn- und Gefahrenmeldungen suchen, ist
+              DEalog die zentrale und aus behördlichen Quellen gespeiste
+              Informationsplattform.
             </p>
             <p>
-              Auf dieser sind die Warn- und Gefahrenmeldungen, sowie die jeweils
-              im Zeitverlauf erg&auml;nzend zugeh&ouml;rigen Informationen,
-              einfach und schnell an einem Ort zu finden.
+              Auf dieser sind die Warn- und Gefahrenmeldungen sowie die jeweils
+              im Zeitverlauf ergänzend zugehörigen Informationen einfach und
+              schnell an einem Ort zu finden.
             </p>
           </div>
         </div>
-        <div class="mt-40">
-          <div class="uppercase text-gray-300 text-xs text-center">
-            dealog f&uuml;r b&uuml;rger:innen
+        <div class="mt-12 sm:mt-40">
+          <div class="uppercase text-gray-300 text-lg sm:text-xs text-center">
+            <a name="buerger-innen">
+              dealog für bürger:innen
+            </a>
           </div>
-          <h2 class="text-2xl font-semibold text-center">
-            &Ouml;ffentliche Informationen aus erster Hand
+          <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+            Öffentliche Informationen aus erster Hand
           </h2>
-          <div class="mt-20 flex">
-            <div>
+          <div
+            class="mt-8 sm:mt-20 block sm:flex space-y-8 sm:space-y-0 space-x-0 sm:space-x-8"
+          >
+            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
               <div>
-                <img
-                  src="images/dependability.svg"
-                  alt="Verl&auml;sslichkeit"
-                />
+                <img src="images/dependability.svg" alt="Verlässlichkeit" />
               </div>
-              <h3 class="mt-8 font-medium">Verl&auml;sslichkeit</h3>
-              <p class="mt-4 text-sm text-gray-700">
+              <h3 class="mt-8 text-2xl sm:text-base font-medium">
+                Verlässlichkeit
+              </h3>
+              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
                 DEalog stellt dir Informationen direkt von deiner
                 Stadtverwaltung oder anderen staatlichen Stellen klar,
-                transparent und nachvollziehbar zur Verf&uuml;gung. L&auml;stiges
-                Zusammensuchen und Verifizieren von wichtigen Informationen
-                geh&ouml;rt der Vergangenheit an.
+                transparent und nachvollziehbar zur Verfügung. Lästiges
+                Zusammensuchen und verifizieren von wichtigen Informationen
+                gehört der Vergangenheit an.
               </p>
             </div>
-            <div class="ml-8">
+            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
               <div>
                 <img
                   src="images/clearness.svg"
-                  alt="&Uuml;bersichtlicher Newsfeed"
+                  alt="Übersichtlicher Newsfeed"
                 />
               </div>
-              <h3 class="mt-8 font-medium">&Uuml;bersichtlicher Newsfeed</h3>
-              <p class="mt-4 text-sm text-gray-700">
-                Dein Newsfeed wird entlang deiner Pr&auml;ferenzen, zum Beispiel
-                nach Standort oder Thema, f&uuml;r dich aus den bestehenden
-                Nachrichten zusammengestellt. Du entscheidest, was f&uuml;r dich
-                am wichtigsten ist.
+              <h3 class="mt-8 text-2xl sm:text-base font-medium">
+                Übersichtlicher Newsfeed
+              </h3>
+              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+                Dein Newsfeed wird entlang deiner Präferenzen, zum Beispiel nach
+                Standort oder Thema, für dich aus den bestehenden Nachrichten
+                zusammengestellt. Du entscheidest, was für dich am wichtigsten
+                ist.
               </p>
             </div>
-            <div class="ml-8">
+            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
               <div>
                 <img src="images/data_economy.svg" alt="Datensparsamkeit" />
               </div>
-              <h3 class="mt-8 font-medium">Datensparsamkeit</h3>
-              <p class="mt-4 text-sm text-gray-700">
-                Du ben&ouml;tigst als B&uuml;rger:in keinen Account. Um den
-                Newsfeed zusammenzustellen, gibst du lediglich die Orte und
-                Themen an, die f&uuml;r dich relevant sind. Ein R&uuml;ckschluss
-                auf deine Person ist zu keiner Zeit m&ouml;glich.
+              <h3 class="mt-8 text-2xl sm:text-base font-medium">
+                Datensparsamkeit
+              </h3>
+              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+                Du benötigst als Bürger:in keinen Account. Um den Newsfeed
+                zusammenzustellen, gibst du lediglich die Orte und Themen an,
+                die für dich relevant sind. Ein Rückschluss auf deine Person ist
+                zu keiner Zeit möglich.
               </p>
             </div>
           </div>
-        </div>
-        <div class="mt-40">
-          <div class="uppercase text-gray-300 text-xs text-center">
-            dealog f&uuml;r den staat
+          <div class="mt-4 text-center sm:text-right">
+            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
           </div>
-          <h2 class="text-2xl font-semibold text-center">
-            Dezentrale Erstellung und zentrale Ver&ouml;ffentlichung
+        </div>
+        <div class="mt-12 sm:mt-40">
+          <div class="uppercase text-gray-300 text-lg sm:text-xs text-center">
+            <a name="staat">
+              dealog für den staat
+            </a>
+          </div>
+          <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+            Dezentrale Erstellung und zentrale Veröffentlichung
           </h2>
-          <div class="mt-20 flex">
-            <div>
+          <div
+            class="mt-8 sm:mt-20 block sm:flex space-y-8 sm:space-y-0 space-x-0 sm:space-x-8"
+          >
+            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
               <div>
                 <img src="images/one_voice_policy.svg" alt="One-Voice Policy" />
               </div>
-              <h3 class="mt-8 font-medium">One-Voice Policy</h3>
-              <p class="mt-4 text-sm text-gray-700">
+              <h3 class="mt-8 text-2xl sm:text-base font-medium">
+                One-Voice Policy
+              </h3>
+              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
                 Die Aufbereitung der Informationen im digitalen
-                DEalog-Backoffice erfolgt auf Seiten der &ouml;ffentlichen
-                Verwaltung dezentral in den Fachabteilungen, wie zum Beispiel
-                dem Ordnungsamt. Die Meldungen f&uuml;r den Newsfeed k&ouml;nnen
-                dann dem Krisen- oder Leitungsstab zur Freigabe vorgelegt
-                werden. Nach der Freigabe erhalten die B&uuml;rger:innen die
-                Informationen immer von derselben herausgebenden Stelle, zum
-                Beispiel der Stadt A.
+                DEalog-Backoffice erfolgt auf Seiten der öffentlichen Verwaltung
+                dezentral in den Fachabteilungen, wie zum Beispiel dem
+                Ordnungsamt. Die Meldungen für den Newsfeed können dann dem
+                Krisen- oder Leitungsstab zur Freigabe vorgelegt werden. Nach
+                der Freigabe erhalten die Bürger:innen die Informationen immer
+                von derselben herausgebenden Stelle, zum Beispiel der Stadt A.
               </p>
             </div>
-            <div class="ml-8">
+            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
               <div>
                 <img src="images/traceability.svg" alt="Nachvollziehbarkeit" />
               </div>
-              <h3 class="mt-8 font-medium">Nachvollziehbarkeit</h3>
-              <p class="mt-4 text-sm text-gray-700">
-                Das DEalog-Backoffice unterst&uuml;tzt die herausgebenden
-                Stellen darin, den &Uuml;berblick &uuml;ber aktive Meldungen und
-                deren Verbreitungsgebiet zu behalten. Nachrichten mit
-                gegenseitigem Bezug k&ouml;nnen miteinander verkn&uuml;pft
-                werden. So kann sich eine Nachricht auf eine fr&uuml;here
-                Meldung einer anderen Instanz beziehen. Damit sind
-                &Auml;nderungen im zeitlichen Verlauf ebenfalls abgebildet.
+              <h3 class="mt-8 text-2xl sm:text-base font-medium">
+                Nachvollziehbarkeit
+              </h3>
+              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+                Das DEalog-Backoffice unterstützt die herausgebenden Stellen
+                darin, den Überblick über aktive Meldungen und deren
+                Verbreitungsgebiet zu behalten. Nachrichten mit gegenseitigem
+                Bezug können miteinander verknüpft werden. So kann sich eine
+                Nachricht auf eine frühere Meldung einer anderen Instanz
+                beziehen. Damit sind Änderungen im zeitlichen Verlauf ebenfalls
+                abgebildet.
               </p>
             </div>
-            <div class="ml-8">
+            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
               <div>
                 <img src="images/dashboard.svg" alt="Zentrales Dashboard" />
               </div>
-              <h3 class="mt-8 font-medium">Zentrales Dashboard</h3>
-              <p class="mt-4 text-sm text-gray-700">
-                In einer &Uuml;bersicht werden alle Meldungen der herausgebenden
+              <h3 class="mt-8 text-2xl sm:text-base font-medium">
+                Zentrales Dashboard
+              </h3>
+              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+                In einer Übersicht werden alle Meldungen der herausgebenden
                 Stelle und ihr derzeitiger Status dargestellt. Die Anzeige von
-                &Ouml;ffnungsraten der einzelnen Meldungen visualisiert, ob die
-                Meldungen die B&uuml;rger:innen auch erreichen und gelesen
-                werden.
+                Öffnungsraten der einzelnen Meldungen visualisiert, ob die
+                Meldungen die Bürger:innen auch erreichen und gelesen werden.
               </p>
             </div>
           </div>
-        </div>
-        <div class="mt-40">
-          <div class="uppercase text-gray-300 text-xs text-center">
-            project dealog
+          <div class="mt-4 text-center sm:text-right">
+            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
           </div>
-          <h2 class="w-1/3 mx-auto text-2xl font-semibold text-center">
-            Top20 Projekt beim Hackathon #WirVsVirus
+        </div>
+        <div class="mt-12 sm:mt-40">
+          <div class="uppercase text-gray-300 text-lg sm:text-xs text-center">
+            <a name="projekt">
+              project dealog
+            </a>
+          </div>
+          <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+            Top20 Projekt beim<br />Hackathon #WirVsVirus
           </h2>
-          <div class="mt-20 w-1/2 mx-auto text-sm space-y-4">
+          <div
+            class="mt-8 px-4 sm:px-0 sm:mt-20 w-full sm:w-1/2 mx-auto text-lg sm:text-sm space-y-4"
+          >
             <p>
-              Im M&auml;rz 2020 fanden wir uns im Rahmen des
-              #WirVsVirus-Hackathon als Team zusammen und haben die Arbeiten an
-              der Fragestellung, wie wir die krisenbegleitende Information der
-              B&uuml;rger:innen zeitgem&auml;&szlig; ausgestalten und dabei
-              gleichzeitig einen Mehrwert f&uuml;r die staatlichen Stellen
-              schaffen k&ouml;nnen, begonnen. Diese Frage ist nicht nur in der
-              Corona-Krise relevant, sondern auch bei anderen krisenhaften
-              Ereignissen wie Waldbr&auml;nden, Hochwasser und vielen mehr.
+              Im März 2020 fanden wir uns im Rahmen des #WirVsVirus-Hackathon
+              als Team zusammen und haben die Arbeiten an der Fragestellung,
+              wie wir die krisenbegleitende Information der Bürger:innen
+              zeitgemäß ausgestalten und dabei gleichzeitig einen Mehrwert für
+              die staatlichen Stellen schaffen können, begonnen. Diese Frage ist nicht nur
+              in der Corona-Krise relevant, sondern auch bei anderen
+              krisenhaften Ereignissen wie Waldbränden, Hochwasser und vielen
+              mehr.
             </p>
             <p>
-              Unsere L&ouml;sung wurde durch die Jury als eine der Top20
-              L&ouml;sungen aus &uuml;ber 1500 Einreichungen ausgew&auml;hlt.
+              Unsere Lösung wurde durch die Jury als eine der Top20 Lösungen aus
+              über 1500 Einreichungen ausgewählt.
             </p>
-            <p>
-              Mehr zum Hackathon hier.
-            </p>
+            <p>Mehr zum Hackathon <a href="https://wirvsvirus.de">hier</a>.</p>
             <h3 class="mt-8 font-medium">
               Solution Enabler Programm
             </h3>
             <p>
-              Im Nachgang zum Hackathon konnten wir unsere L&ouml;sung im Rahmen
-              des Solution Enabler Programms (SEP) weiter vorantreiben. Zudem
-              haben wir eine F&ouml;rderung des Bundesministeriums f&uuml;r
-              Bildung und Forschung (BMBF) erhalten, um DEalog weiterentwickeln
-              zu k&ouml;nnen. &Uuml;ber das SEP haben wir auch unsere
-              Praxispartner:innen gewinnen k&ouml;nnen.
+              Im Nachgang zum Hackathon konnten wir unsere Lösung im Rahmen des
+              Solution Enabler Programms (SEP) weiter vorantreiben. Zudem haben
+              wir eine Förderung des Bundesministeriums für Bildung und
+              Forschung (BMBF) erhalten, um DEalog weiterentwickeln zu können.
+              über das SEP haben wir auch unsere Praxispartner:innen gewinnen
+              können.
             </p>
             <h3 class="mt-8 font-medium">Praxispartner:innen</h3>
             <p>
-              Mit dem Bundesamt f&uuml;r Bev&ouml;lkerungsschutz und
-              Katastrophenhilfe (BBK) stehen wir bereits seit dem Hackathon im
-              engen und konstruktiven Austausch. Mit der Bezirksregierung
-              Arnsberg und dem dort angesiedelten GovLab haben wir eine
-              organisatorische Heimat f&uuml;r das Projekt gefunden. Aus dem
-              Regierungsbezirk sind zudem der Hochsauerlandkreis mit der Stadt
-              Arnsberg und der Ennepe-Ruhr-Kreis mit der Stadt Sprockh&ouml;vel
-              Teil des Pilot-Settings geworden. Gemeinsam haben wir die
-              Problemdefinition und die m&ouml;gliche L&ouml;sung weiter
-              konkretisiert und validiert, um so nah wie m&ouml;glich am realen
-              Bedarf entwickeln zu k&ouml;nnen.
+              Mit dem Bundesamt für Bevölkerungsschutz und Katastrophenhilfe
+              (BBK) stehen wir bereits seit dem Hackathon im engen und
+              konstruktiven Austausch.
             </p>
             <p>
-              Mit dem ITZ Bund und dem BBK stehen wir in Kontakt, um &uuml;ber
-              einen zuk&uuml;nftigen Zielbetrieb in staatlicher Hand zu
-              sprechen. Zahlreiche weitere Expert:innen stehen uns im Rahmen des
-              SEP ad hoc und fortlaufend zur Verf&uuml;gung.
+              Mit der Bezirksregierung Arnsberg und dem dort angesiedelten
+              GovLab haben wir eine organisatorische Heimat für das Projekt
+              gefunden. Aus dem Regierungsbezirk sind zudem der
+              Hochsauerlandkreis mit der Stadt Arnsberg und der
+              Ennepe-Ruhr-Kreis mit der Stadt Sprockhövel Teil des
+              Pilot-Settings geworden. Gemeinsam haben wir die Problemdefinition
+              und die mögliche Lösung weiter konkretisiert und validiert, um so
+              nah wie möglich am realen Bedarf entwickeln zu können.
+            </p>
+            <p>
+              Mit dem ITZ Bund und dem BBK stehen wir in Kontakt, um über einen
+              zukünftigen Zielbetrieb in staatlicher Hand zu sprechen.
+              Zahlreiche weitere Expert:innen stehen uns im Rahmen des SEP ad
+              hoc und fortlaufend zur Verfügung.
             </p>
             <h3 class="mt-8 font-medium">Team</h3>
             <p>
               Fotos vereinheitlicht/Graustufen + Name + Aufgaben im Team + Link
-              zu LinkedIn/XING siehe Team-Folie Pr&auml;sentation Kickoff
+              zu LinkedIn/XING siehe Team-Folie Präsentation Kickoff
               Ansprechpartner info@ / presse@ / support@-Adressen
             </p>
+          </div>
+          <div class="mt-4 text-center sm:text-right">
+            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
           </div>
         </div>
       </section>
     </main>
-    <footer class="mt-40">
+    <footer class="mt-12 sm:mt-40">
       <div class="bg-gray-700">
         <div
           class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
         >
-          <div class="mx-40">
-            <div class="flex justify-between text-gray-400 text-sm">
+          <div class="mx-4 sm:mx-40">
+            <div class="block sm:flex sm:justify-between text-gray-400 text-sm">
               <div>
                 <p>
                   DEalog - ein Projekt des GovLab Arnsberg Adresse GovLab
@@ -377,17 +425,17 @@
                   <p>Land Nordrhein-Westfalen</p>
                   <p>vertreten durch die</p>
                   <p>Bezirksregierung Arnsberg</p>
-                  <p>Seibertzstra&szlig;e 1</p>
+                  <p>Seibertzstraße 1</p>
                   <p>59821 Arnsberg</p>
                   <p>E-Mail poststelle@bezreg-arnsberg.nrw.de</p>
                   <p>Telefon 02931 82-0</p>
                   <p>Telefax 02931 82-2520</p>
                 </div>
               </div>
-              <div>
+              <div class="mt-8 sm:mt-0">
                 <h4 class="font-semibold">Presserechtliche Verantwortung</h4>
                 <div class="mt-4">
-                  <p>Christoph S&ouml;bbeler</p>
+                  <p>Christoph Söbbeler</p>
                   <p>Pressesprecher der Bezirksregierung Arnsberg</p>
                   <p>Seibertzstraße 1</p>
                   <p>59821 Arnsberg</p>
@@ -402,17 +450,11 @@
             class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between"
           >
             <div class="flex md:order-2">
-              <a href="#" class="text-gray-400 hover:text-gray-300">
-                <span class="sr-only">Facebook</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    fill-rule="evenodd"
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
-              <a href="#" class="ml-6 text-gray-400 hover:text-gray-300">
+              <a name="kontakt"></a>
+              <a
+                href="https://twitter.com/DEalogApp"
+                class="ml-6 text-gray-400 hover:text-gray-300"
+              >
                 <span class="sr-only">Twitter</span>
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -420,7 +462,10 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="ml-6 text-gray-400 hover:text-gray-300">
+              <a
+                href="https://github.com/dealog"
+                class="ml-6 text-gray-400 hover:text-gray-300"
+              >
                 <span class="sr-only">GitHub</span>
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -440,5 +485,44 @@
         </div>
       </div>
     </footer>
+    <script lang="javascript">
+      $( document ).ready(function() {
+          $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+      });
+    </script>
   </body>
 </html>
