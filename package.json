@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "tailwindcss": "^1.8.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.6.2"
+  }
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEalog</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav x-data="{ isOpen: false }" class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between">
+            <div class="flex justify-center h-16">
+              <div class="flex">
+                <div class="-ml-2 mr-2 flex items-center md:hidden">
+                  <!-- Mobile menu button -->
+                  <button
+                    @click="isOpen = !isOpen"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                    aria-label="Main menu"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      class="block h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                    <svg
+                      class="hidden h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex-shrink-0 flex items-center">
+                  <img
+                    class="block lg:hidden h-8 w-auto"
+                    src="images/dealog_iconlogo.svg"
+                    alt="DEalog logo"
+                  />
+                  <img
+                    class="hidden lg:block h-8 w-auto"
+                    src="images/dealog_logo.svg"
+                    alt="DEalog logo"
+                  />
+                </div>
+                <div class="hidden md:ml-6 md:flex space-x-12">
+                  <a
+                    href="#"
+                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                  >
+                    F&uuml;r B&uuml;rger:innen
+                  </a>
+                  <a
+                    href="#"
+                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                  >
+                    F&uuml;r den Staat
+                  </a>
+                  <a
+                    href="#"
+                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                  >
+                    &Uuml;ber das Projekt
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <button
+                  class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 rounded-md text-gray-100 bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-600 transition ease-in-out duration-150"
+                >
+                  Kontakt
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          x-show="isOpen"
+          x-cloak
+          class="block md:hidden"
+          style="display: none;"
+        >
+          <div class="pt-2 pb-3">
+            <a
+              href="#"
+              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+            >
+              F&uuml;r B&uuml;rger:innen
+            </a>
+            <a
+              href="#"
+              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+            >
+              F&uuml;r den Staat
+            </a>
+            <a
+              href="#"
+              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+            >
+              &Uuml;ber das Projekt
+            </a>
+            <a
+              href="#"
+              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+            >
+              Kontakt
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="text-gray-900">
+      <section class="mt-32 w-3/4 mx-auto">
+        <h1 class="text-center text-5xl font-semibold">
+          Dein <span class="-mb-1 border-b-4 border-gray-900">Staat</span>.
+          Deine <span class="-mb-1 border-b-4 border-red-500">Infos</span>. Dein
+          <span class="-mb-1 border-b-4 border-yellow-300">DEalog</span>.
+        </h1>
+        <p class="mt-16 text-gray-400 text-sm text-center">
+          Offizielle Krisenkommunktation f&uuml;r Staat und B&uuml;rger:innen
+        </p>
+        <div class="mt-16">
+          <div
+            class="flex justify-center space-x-4 text-gray-300 uppercase text-2xs font-light"
+          >
+            <div>
+              gef&ouml;rdert durch
+            </div>
+            <div>
+              in kooperation mit
+            </div>
+          </div>
+          <div class="w-1/2 mx-auto">
+            <img src="images/sponsoren.png" title="Sponsore" alt="Sponsoren" />
+          </div>
+        </div>
+        <div class="mt-24">
+          <img src="images/side_visual.png" alt="DEalog" />
+        </div>
+        <div class="mt-20 flex justify-between">
+          <h2 class="w-1/2 text-center text-2xl font-semibold">
+            Im Dialog mit den B&uuml;rger:innen: Staatliche Krisenkommunikation
+          </h2>
+          <div class="ml-4 w-1/2 text-sm text-gray-600 space-y-4">
+            <p>
+              F&uuml;r Menschen in informationsintensiven Krisenlagen in
+              Deutschland, die nach f&uuml;r sie relevanten und
+              verl&auml;sslichen Informationen zu bereits kommunizierten Warn-
+              und Gefahrenmeldungen suchen, ist DEalog die zentrale und aus
+              beh&ouml;rdlichen Quellen gespeiste Informationsplattform.
+            </p>
+            <p>
+              Auf dieser sind die Warn- und Gefahrenmeldungen sowie die jeweils
+              im Zeitverlauf erg&auml;nzend zugeh&ouml;rigen Informationen
+              einfach und schnell an einem Ort zu finden.
+            </p>
+          </div>
+        </div>
+        <div class="mt-40">
+          <div class="uppercase text-gray-300 text-xs text-center">
+            dealog f&uuml;r b&uuml;rger:innen
+          </div>
+          <h2 class="text-2xl font-semibold text-center">
+            &Ouml;ffentliche Informationen aus erster Hand
+          </h2>
+          <div class="mt-20 flex">
+            <div>
+              <div>
+                <img
+                  src="images/dependability.svg"
+                  alt="Verl&auml;sslichkeit"
+                />
+              </div>
+              <h3 class="mt-8 font-medium">Verl&auml;sslichkeit</h3>
+              <p class="mt-4 text-sm text-gray-700">
+                DEalog stellt dir Informationen direkt von deiner
+                Stadtverwaltung oder anderen staatlichen Stellen klar und
+                transparent nachvollziehbar zur Verf&uuml;gung. L&auml;stiges
+                Zusammensuchen und verifizieren von wichtigen Informationen
+                geh&ouml;rt der Vergangenheit an.
+              </p>
+            </div>
+            <div class="ml-8">
+              <div>
+                <img
+                  src="images/clearness.svg"
+                  alt="&Uuml;bersichtlicher Newsfeed"
+                />
+              </div>
+              <h3 class="mt-8 font-medium">&Uuml;bersichtlicher Newsfeed</h3>
+              <p class="mt-4 text-sm text-gray-700">
+                Dein Newsfeed wird entlang deiner Pr&auml;ferenzen, zum Beispiel
+                nach Standort oder Thema, f&uuml;r dich aus den bestehenden
+                Nachrichten zusammengestellt. Du entscheidest, was f&uuml;r dich
+                am wichtigsten ist.
+              </p>
+            </div>
+            <div class="ml-8">
+              <div>
+                <img src="images/data_economy.svg" alt="Datensparsamkeit" />
+              </div>
+              <h3 class="mt-8 font-medium">Datensparsamkeit</h3>
+              <p class="mt-4 text-sm text-gray-700">
+                Du ben&ouml;tigst als B&uuml;rger:in keinen Account. Um den
+                Newsfeed zusammenzustellen, gibst du lediglich die Orte und
+                Themen an, die f&uuml;r dich relevant sind. Ein R&uuml;ckschluss
+                auf deine Person ist zu keiner Zeit m&ouml;glich.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-40">
+          <div class="uppercase text-gray-300 text-xs text-center">
+            dealog f&uuml;r den staat
+          </div>
+          <h2 class="text-2xl font-semibold text-center">
+            Dezentrale Erstellung und zentrale Ver&ouml;ffentlichung
+          </h2>
+          <div class="mt-20 flex">
+            <div>
+              <div>
+                <img src="images/one_voice_policy.svg" alt="One-Voice Policy" />
+              </div>
+              <h3 class="mt-8 font-medium">One-Voice Policy</h3>
+              <p class="mt-4 text-sm text-gray-700">
+                Die Aufbereitung der Informationen im digitalen
+                DEalog-Backoffice erfolgt auf Seiten der &ouml;ffentlichen
+                Verwaltung dezentral in den Fachabteilungen, wie zum Beispiel
+                dem Ordnungsamt. Die Meldungen f&uuml;r den Newsfeed k&ouml;nnen
+                dann dem Krisen- oder Leitungsstab zur Freigabe vorgelegt
+                werden. Nach der Freigabe erhalten die B&uuml;rger:innen die
+                Informationen immer von derselben herausgebenden Stelle, zum
+                Beispiel der Stadt A.
+              </p>
+            </div>
+            <div class="ml-8">
+              <div>
+                <img src="images/traceability.svg" alt="Nachvollziehbarkeit" />
+              </div>
+              <h3 class="mt-8 font-medium">Nachvollziehbarkeit</h3>
+              <p class="mt-4 text-sm text-gray-700">
+                Das DEalog-Backoffice unterst&uuml;tzt die herausgebenden
+                Stellen darin, den &Uuml;berblick &uuml;ber aktive Meldungen und
+                deren Verbreitungsgebiet zu behalten. Nachrichten mit
+                gegenseitigem Bezug k&ouml;nnen miteinander verkn&uuml;pft
+                werden. So kann sich eine Nachricht auf eine fr&uuml;here
+                Meldung einer anderen Instanz beziehen. Damit sind
+                &Auml;nderungen im zeitlichen Verlauf ebenfalls abgebildet.
+              </p>
+            </div>
+            <div class="ml-8">
+              <div>
+                <img src="images/dashboard.svg" alt="Zentrales Dashboard" />
+              </div>
+              <h3 class="mt-8 font-medium">Zentrales Dashboard</h3>
+              <p class="mt-4 text-sm text-gray-700">
+                In einer &Uuml;bersicht werden alle Meldungen der herausgebenden
+                Stelle und ihr derzeitiger Status dargestellt. Die Anzeige von
+                &Ouml;ffnungsraten der einzelnen Meldungen visualisiert, ob die
+                Meldungen die B&uuml;rger:innen auch erreichen und gelesen
+                werden.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-40">
+          <div class="uppercase text-gray-300 text-xs text-center">
+            project dealog
+          </div>
+          <h2 class="w-1/3 mx-auto text-2xl font-semibold text-center">
+            Top20 Projekt beim Hackathon #WirVsVirus
+          </h2>
+          <div class="mt-20 w-1/2 mx-auto text-sm space-y-4">
+            <p>
+              Im M&auml;rz 2020 fanden wir uns im Rahmen des
+              #WirVsVirus-Hackathon als Team zusammen und begann die Arbeiten an
+              der Fragestellung, wie wir die krisenbegleitende Information der
+              B&uuml;rger:innen zeitgem&auml;&szlig; ausgestalten und dabei
+              gleichzeitig einen Mehrwert f&uuml;r die staatlichen Stellen
+              schaffen k&ouml;nnen. Diese Frage ist nicht nur in der
+              Corona-Krise relevant, sondern auch bei anderen krisenhaften
+              Ereignissen wie Waldbr&auml;nden, Hochwasser und vielen mehr.
+            </p>
+            <p>
+              Unsere L&ouml;sung wurde durch die Jury als eine der Top20
+              L&ouml;sungen aus &uuml;ber 1500 Einreichungen ausgew&auml;hlt.
+            </p>
+            <p>
+              Mehr zum Hackathon hier.
+            </p>
+            <h3 class="mt-8 font-medium">
+              Solution Enabler Programm
+            </h3>
+            <p>
+              Im Nachgang zum Hackathon konnten wir unsere L&ouml;sung im Rahmen
+              des Solution Enabler Programms (SEP) weiter vorantreiben. Zudem
+              haben wir eine F&ouml;rderung des Bundesministeriums f&uuml;r
+              Bildung und Forschung (BMBF) erhalten, um DEalog weiterentwickeln
+              zu k&ouml;nnen. &Uuml;ber das SEP haben wir auch unsere
+              Praxispartner:innen gewinnen k&ouml;nnen.
+            </p>
+            <h3 class="mt-8 font-medium">Praxispartner:innen</h3>
+            <p>
+              Mit dem Bundesamt f&uuml;r Bev&ouml;lkerungsschutz und
+              Katastrophenhilfe (BBK) stehen wir bereits seit dem Hackathon im
+              engen und konstruktiven Austausch. Mit der Bezirksregierung
+              Arnsberg und dem dort angesiedelten GovLab haben wir eine
+              organisatorische Heimat f&uuml;r das Projekt gefunden. Aus dem
+              Regierungsbezirk sind zudem der Hochsauerlandkreis mit der Stadt
+              Arnsberg und der Ennepe-Ruhr-Kreis mit der Stadt Sprockh&ouml;vel
+              Teil des Pilot-Settings geworden. Gemeinsam haben wir die
+              Problemdefinition und die m&ouml;gliche L&ouml;sung weiter
+              konkretisiert und validiert, um so nah wie m&ouml;glich am realen
+              Bedarf entwickeln zu k&ouml;nnen.
+            </p>
+            <p>
+              Mit dem ITZ Bund und dem BBK stehen wir in Kontakt, um &uuml;ber
+              einen zuk&uuml;nftigen Zielbetrieb in staatlicher Hand zu
+              sprechen. Zahlreiche weitere Expert:innen stehen uns im Rahmen des
+              SEP ad hoc und fortlaufend zur Verf&uuml;gung.
+            </p>
+            <h3 class="mt-8 font-medium">Team</h3>
+            <p>
+              Fotos vereinheitlicht/Graustufen + Name + Aufgaben im Team + Link
+              zu LinkedIn/XING siehe Team-Folie Pr&auml;sentation Kickoff
+              Ansprechpartner info@ / presse@ / support@-Adressen
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-40">
+      <div class="bg-gray-700">
+        <div
+          class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
+        >
+          <div class="mx-40">
+            <div class="flex justify-between text-gray-400 text-sm">
+              <div>
+                <p>
+                  DEalog - ein Projekt des GovLab Arnsberg Adresse GovLab
+                  Arnsberg
+                </p>
+                <h4 class="mt-8 font-semibold">Herausgeber</h4>
+                <div class="mt-4">
+                  <p>Land Nordrhein-Westfalen</p>
+                  <p>vertreten durch die</p>
+                  <p>Bezirksregierung Arnsberg</p>
+                  <p>Seibertzstra&szlig;e 1</p>
+                  <p>59821 Arnsberg</p>
+                  <p>E-Mail poststelle@bezreg-arnsberg.nrw.de</p>
+                  <p>Telefon 02931 82-0</p>
+                  <p>Telefax 02931 82-2520</p>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold">Presserechtliche Verantwortung</h4>
+                <div class="mt-4">
+                  <p>Christoph S&ouml;bbeler</p>
+                  <p>Pressesprecher der Bezirksregierung Arnsberg</p>
+                  <p>Seibertzstraße 1</p>
+                  <p>59821 Arnsberg</p>
+                  <p>E-Mail christoph.soebbeler@bezreg-arnsberg.nrw.de</p>
+                  <p>Telefon: 02931 82-2120</p>
+                  <p>Telefax: 02931 82-2467</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between"
+          >
+            <div class="flex md:order-2">
+              <a href="#" class="text-gray-400 hover:text-gray-300">
+                <span class="sr-only">Facebook</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="ml-6 text-gray-400 hover:text-gray-300">
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="ml-6 text-gray-400 hover:text-gray-300">
+                <span class="sr-only">GitHub</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p
+              class="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1"
+            >
+              &copy; 2020 Das DEalog Team
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
