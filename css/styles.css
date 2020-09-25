@@ -960,6 +960,10 @@ video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-gray-100 {
   --text-opacity: 1;
   color: #f4f5f7;
@@ -1046,6 +1050,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .whitespace-no-wrap {
