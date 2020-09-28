@@ -1290,10 +1290,6 @@ video {
     justify-content: space-between;
   }
 
-  .sm\:h-52 {
-    height: 13rem;
-  }
-
   .sm\:text-xs {
     font-size: 0.75rem;
   }
@@ -1449,6 +1445,10 @@ video {
 @media (min-width: 1280px) {
   .xl\:h-20 {
     height: 5rem;
+  }
+
+  .xl\:h-52 {
+    height: 13rem;
   }
 
   .xl\:m-4 {
