@@ -23,7 +23,7 @@ jobs:
     - name: Set env
       run: |
         echo ::set-env name=AWS_REGION::eu-central-1
-        echo ::set-env name=S3_BUCKET::dealog.de
+        echo ::set-env name=S3_BUCKET::www.dealog.de
     
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
