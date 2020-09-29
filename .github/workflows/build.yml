@@ -2,9 +2,13 @@ name: Build
 
 on:
   push:
-    branches: [ $default_branch ]
+    branches:
+      - main
+      - DEV-115_deployment-on-aws
   pull_request:
-    branches: [ $default_branch ]
+    branches:
+      - main
+      - DEV-115_deployment-on-aws
 
 jobs:
   build:
