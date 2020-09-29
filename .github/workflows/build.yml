@@ -6,9 +6,7 @@ on:
       - main
       - DEV-115_deployment-on-aws
   pull_request:
-    branches:
-      - main
-      - DEV-115_deployment-on-aws
+    branches: [ $default_branch ]
 
 jobs:
   build:
