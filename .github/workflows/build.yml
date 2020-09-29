@@ -1,0 +1,49 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Process the CSS with Tailwind
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+
+    - name: Use cached node_modules
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          nodeModules-
+
+    - name: Install dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install
+
+    - name: Process the CSS
+      run: npx tailwindcss build app.css -o css/styles.css
+      env:
+        NODE_ENV: production
+      
+    - name: Create artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: website
+        path: |
+          ./css/styles.css
+          ./images
+          ./*.png
+          ./favicon.ico
+          ./index.html
+          ./manifest.json
+          ./robots.txt
