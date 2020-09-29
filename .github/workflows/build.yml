@@ -2,9 +2,7 @@ name: Build
 
 on:
   push:
-    branches:
-      - main
-      - DEV-115_deployment-on-aws
+    branches: [ $default_branch ]
   pull_request:
     branches: [ $default_branch ]
 

@@ -3,9 +3,7 @@ name: Deploy
 on:
   workflow_run:
     workflows: [ "Build" ]
-    branches:
-      - main
-      - DEV-115_deployment-on-aws
+    branches: [ $default_branch ]
     types:
       - completed
 
