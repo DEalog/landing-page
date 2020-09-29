@@ -33,4 +33,4 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
     
     - name: Sync with S3
-      run: aws s3 sync ./website s3://${{ env.S3_BUCKET }} --delete
+      run: aws s3 sync ./website s3://${{ env.S3_BUCKET }} --delete --acl public-read
