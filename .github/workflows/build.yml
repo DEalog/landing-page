@@ -16,17 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set version number
-      id: version
-      uses: DEalog/version-action@v0.1.0
-      with:
-        fallback-prefix: ""
-
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '14'
-        check-latest: true
 
     - name: Use cached node_modules
       id: cache
@@ -45,3 +38,16 @@ jobs:
       run: npx tailwindcss build app.css -o css/styles.css
       env:
         NODE_ENV: production
+      
+    - name: Create artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: website
+        path: |
+          ./css/styles.css
+          ./images
+          ./*.png
+          ./favicon.ico
+          ./index.html
+          ./manifest.json
+          ./robots.txt

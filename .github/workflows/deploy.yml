@@ -1,0 +1,36 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [ "Build" ]
+    branches:
+      - main
+      - DEV-115_deployment-on-aws
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name:  Deploy to Amazon S3
+
+    steps:
+    - name: Download build artifacts
+      uses: dawidd6/action-download-artifact@v2
+      with:
+        workflow: ${{ github.event.workflow_run.workflow_id }}
+
+    - name: Set env
+      run: |
+        echo ::set-env name=AWS_REGION::eu-central-1
+        echo ::set-env name=S3_BUCKET::dealog.de
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Sync with S3
+      run: aws s3 sync ./website s3://${{ env.S3_BUCKET }} --delete
