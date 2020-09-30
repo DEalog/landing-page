@@ -626,6 +626,12 @@ video {
   margin-bottom: calc(2rem * var(--space-y-reverse));
 }
 
+.space-x-8 > :not(template) ~ :not(template) {
+  --space-x-reverse: 0;
+  margin-right: calc(2rem * var(--space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--space-x-reverse)));
+}
+
 .space-x-12 > :not(template) ~ :not(template) {
   --space-x-reverse: 0;
   margin-right: calc(3rem * var(--space-x-reverse));
@@ -927,6 +933,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
 }
@@ -961,11 +971,6 @@ video {
 
 .max-w-screen-xl {
   max-width: 1280px;
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .focus\:outline-none:focus {
@@ -1380,6 +1385,10 @@ video {
 
   .sm\:w-3\/4 {
     width: 75%;
+  }
+
+  .sm\:w-7\/12 {
+    width: 58.333333%;
   }
 }
 
