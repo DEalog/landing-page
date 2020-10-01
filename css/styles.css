@@ -1062,12 +1062,6 @@ video {
   color: rgba(244, 245, 247, var(--text-opacity));
 }
 
-.text-gray-300 {
-  --text-opacity: 1;
-  color: #d2d6dc;
-  color: rgba(210, 214, 220, var(--text-opacity));
-}
-
 .text-gray-400 {
   --text-opacity: 1;
   color: #9fa6b2;
