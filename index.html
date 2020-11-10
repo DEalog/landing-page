@@ -33,20 +33,20 @@
   <body name="top">
     <header>
       <nav x-data="{ isOpen: false }" class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="flex justify-between">
             <div class="flex justify-center h-16">
               <div class="flex">
-                <div class="-ml-2 mr-2 flex items-center md:hidden">
+                <div class="flex items-center mr-2 -ml-2 md:hidden">
                   <!-- Mobile menu button -->
                   <button
                     @click="isOpen = !isOpen"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                    class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                     aria-label="Main menu"
                     aria-expanded="false"
                   >
                     <svg
-                      class="block h-6 w-6"
+                      class="block w-6 h-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -59,7 +59,7 @@
                       />
                     </svg>
                     <svg
-                      class="hidden h-6 w-6"
+                      class="hidden w-6 h-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -73,14 +73,14 @@
                     </svg>
                   </button>
                 </div>
-                <div class="flex-shrink-0 flex items-center">
+                <div class="flex items-center flex-shrink-0">
                   <img
-                    class="block lg:hidden h-8 w-auto"
+                    class="block w-auto h-8 lg:hidden"
                     src="images/dealog_iconlogo.svg"
                     alt="DEalog logo"
                   />
                   <img
-                    class="hidden lg:block h-8 w-auto"
+                    class="hidden w-auto h-8 lg:block"
                     src="images/dealog_logo.svg"
                     alt="DEalog logo"
                   />
@@ -88,25 +88,25 @@
                 <div class="hidden md:ml-6 md:flex space-x-12">
                   <a
                     href="#buerger-innen"
-                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent leading-5 transition duration-150 ease-in-out hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
                     Für Bürger:innen
                   </a>
                   <a
                     href="#staat"
-                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent leading-5 transition duration-150 ease-in-out hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
                     Für den Staat
                   </a>
                   <a
                     href="#projekt"
-                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent leading-5 transition duration-150 ease-in-out hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
                     Über das Projekt
                   </a>
                   <a
                     href="#team"
-                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
+                    class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent leading-5 transition duration-150 ease-in-out hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300"
                   >
                     Das Team
                   </a>
@@ -117,7 +117,7 @@
               <div class="flex-shrink-0">
                 <a
                   href="#kontakt"
-                  class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 rounded-md text-gray-100 bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-600 transition ease-in-out duration-150"
+                  class="relative inline-flex items-center px-4 py-2 text-sm text-gray-100 bg-gray-800 border border-transparent leading-5 rounded-md shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-600 transition ease-in-out duration-150"
                 >
                   Kontakt
                 </a>
@@ -130,37 +130,37 @@
           x-show="isOpen"
           x-cloak
           class="block md:hidden"
-          style="display: none;"
+          style="display: none"
         >
           <div class="pt-2 pb-3">
             <a
               href="#buerger-innen"
-              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+              class="block py-2 pl-3 pr-4 text-base font-medium text-gray-600 whitespace-no-wrap border-l-4 border-transparent transition duration-150 ease-in-out sm:pl-5 sm:pr-6 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
               Für Bürger:innen
             </a>
             <a
               href="#staat"
-              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+              class="block py-2 pl-3 pr-4 text-base font-medium text-gray-600 whitespace-no-wrap border-l-4 border-transparent transition duration-150 ease-in-out sm:pl-5 sm:pr-6 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
               Für den Staat
             </a>
             <a
               href="#projekt"
-              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+              class="block py-2 pl-3 pr-4 text-base font-medium text-gray-600 whitespace-no-wrap border-l-4 border-transparent transition duration-150 ease-in-out sm:pl-5 sm:pr-6 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
               Über das Projekt
             </a>
             <a
               href="#team"
-              class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+              class="block py-2 pl-3 pr-4 text-base font-medium text-gray-600 whitespace-no-wrap border-l-4 border-transparent transition duration-150 ease-in-out sm:pl-5 sm:pr-6 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
               Das Team
             </a>
             <hr class="mt-4" />
             <a
               href="#kontakt"
-              class="mt-4 block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition duration-150 ease-in-out sm:pl-5 sm:pr-6 whitespace-no-wrap border-transparent text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+              class="block py-2 pl-3 pr-4 mt-4 text-base font-medium text-gray-600 whitespace-no-wrap border-l-4 border-transparent transition duration-150 ease-in-out sm:pl-5 sm:pr-6 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
             >
               Kontakt
             </a>
@@ -170,10 +170,10 @@
     </header>
     <main class="text-gray-900">
       <section
-        class="mt-12 sm:mt-32 w-full sm:w-3/4 px-2 mx-0 sm:px-0 sm:mx-auto"
+        class="w-full px-2 mx-0 mt-12 sm:mt-32 sm:w-3/4 sm:px-0 sm:mx-auto"
       >
         <h3
-          class="block sm:flex sm:flex-wrap sm:space-x-1 sm:justify-center text-center text-5xl font-semibold"
+          class="block text-5xl font-semibold text-center sm:flex sm:flex-wrap sm:space-x-1 sm:justify-center"
         >
           <p>
             <span class="-mb-1 border-b-4 border-gray-900">DEalog</span
@@ -186,20 +186,18 @@
             Deine <span class="-mb-1 border-b-4 border-yellow-300">Infos</span>.
           </p>
         </h3>
-        <h2 class="mt-16 text-gray-500 text-sm text-center">
+        <h2 class="mt-16 text-sm text-center text-gray-500">
           Offizielle Krisenkommunikation für Staat und Bürger:innen
         </h2>
-        <div class="sm:mx-auto sm:w-5/6 mt-12 sm:mt-16">
+        <div class="mt-12 sm:mx-auto sm:w-5/6 sm:mt-16">
           <div
-            class="flex justify-center space-x-4 text-gray-400 uppercase text-2xs font-light"
+            class="flex justify-center font-light text-gray-400 uppercase space-x-4 text-2xs"
           >
             <div class="flex flex-col items-center sm:items-end">
-              <div>
-                gefördert durch
-              </div>
+              <div>gefördert durch</div>
               <div class="h-full">
                 <div
-                  class="h-full mt-6 flex-none flex flex-col sm:flex-row items-center justify-start sm:justify-end space-y-4 sm:space-y-0"
+                  class="flex flex-col items-center justify-start flex-none h-full mt-6 sm:flex-row sm:justify-end space-y-4 sm:space-y-0"
                 >
                   <div>
                     <img
@@ -219,12 +217,10 @@
               </div>
             </div>
             <div class="flex flex-col items-center sm:items-start">
-              <div>
-                in Kooperation mit
-              </div>
+              <div>in Kooperation mit</div>
               <div class="h-full">
                 <div
-                  class="h-full mt-6 flex-none flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0"
+                  class="flex flex-col items-center flex-none h-full mt-6 sm:flex-row space-y-4 sm:space-y-0"
                 >
                   <div>
                     <img
@@ -249,12 +245,12 @@
           <img src="images/side_visual.jpg" alt="DEalog" />
         </div>
         <div class="mt-12 sm:mt-20 sm:flex sm:justify-between">
-          <h1 class="w-full sm:w-1/2 text-center text-2xl font-semibold">
+          <h1 class="w-full text-2xl font-semibold text-center sm:w-1/2">
             <p>Im DEalog mit den Bürger:innen -</p>
             <p>Staatliche Krisenkommunikation</p>
           </h1>
           <div
-            class="mt-8 sm:mt-0 px-4 sm:px-0 ml-0 sm:ml-4 w-full sm:w-1/2 text-lg sm:text-sm text-gray-600 space-y-4"
+            class="w-full px-4 mt-8 ml-0 text-lg text-gray-600 sm:mt-0 sm:px-0 sm:ml-4 sm:w-1/2 sm:text-sm space-y-4"
           >
             <p>
               Für Menschen in informationsintensiven Krisenlagen in Deutschland,
@@ -271,25 +267,23 @@
           </div>
         </div>
         <div class="mt-12 sm:mt-40">
-          <div class="uppercase text-gray-400 text-lg sm:text-xs text-center">
-            <h3 name="buerger-innen">
-              dealog für bürger:innen
-            </h3>
+          <div class="text-lg text-center text-gray-400 uppercase sm:text-xs">
+            <h3 name="buerger-innen">dealog für bürger:innen</h3>
           </div>
-          <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+          <h2 class="text-3xl font-semibold text-center sm:text-2xl">
             Relevante Informationen aus erster Hand
           </h2>
           <div
-            class="mt-8 sm:mt-20 block sm:flex space-y-8 sm:space-y-0 space-x-0 sm:space-x-8"
+            class="block mt-8 sm:mt-20 sm:flex space-y-8 sm:space-y-0 space-x-0 sm:space-x-8"
           >
-            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
+            <div class="flex flex-col items-center w-full sm:block sm:w-1/3">
               <div>
                 <img src="images/dependability.svg" alt="Verlässlichkeit" />
               </div>
-              <h4 class="mt-8 text-2xl sm:text-base font-medium">
+              <h4 class="mt-8 text-2xl font-medium sm:text-base">
                 Verlässlichkeit
               </h4>
-              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+              <p class="px-4 mt-4 text-lg text-gray-700 sm:px-0 sm:text-sm">
                 DEalog stellt dir öffentliche Informationen direkt von deiner
                 Stadtverwaltung oder anderen staatlichen Stellen klar und
                 transparent nachvollziehbar zur Verfügung. Lästiges
@@ -297,31 +291,31 @@
                 gehört der Vergangenheit an.
               </p>
             </div>
-            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
+            <div class="flex flex-col items-center w-full sm:block sm:w-1/3">
               <div>
                 <img
                   src="images/clearness.svg"
                   alt="Übersichtlicher Newsfeed"
                 />
               </div>
-              <h4 class="mt-8 text-2xl sm:text-base font-medium">
+              <h4 class="mt-8 text-2xl font-medium sm:text-base">
                 Übersichtlicher Newsfeed
               </h4>
-              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+              <p class="px-4 mt-4 text-lg text-gray-700 sm:px-0 sm:text-sm">
                 Dein DEalog-Newsfeed wird nur entlang deiner Präferenzen, zum
                 Beispiel nach ausgewähltem Standort oder Thema, aus den
                 bestehenden Meldungen extra für dich zusammengestellt. Du
                 entscheidest, was für dich am wichtigsten ist!
               </p>
             </div>
-            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
+            <div class="flex flex-col items-center w-full sm:block sm:w-1/3">
               <div>
                 <img src="images/data_economy.svg" alt="Datensparsamkeit" />
               </div>
-              <h4 class="mt-8 text-2xl sm:text-base font-medium">
+              <h4 class="mt-8 text-2xl font-medium sm:text-base">
                 Datensparsamkeit
               </h4>
-              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+              <p class="px-4 mt-4 text-lg text-gray-700 sm:px-0 sm:text-sm">
                 Du benötigst als Bürger:in keinen Account für die Nutzung von
                 DEalog. Um den Newsfeed zusammenzustellen, gibst du lediglich
                 die Orte und Themen an, die für dich relevant sind. Ein
@@ -330,30 +324,28 @@
             </div>
           </div>
           <div class="mt-4 text-center sm:text-right">
-            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
+            <a href="#top" class="text-lg underline sm:text-sm">Zum Anfang</a>
           </div>
         </div>
         <div class="mt-12 sm:mt-40">
-          <div class="uppercase text-gray-400 text-lg sm:text-xs text-center">
-            <h3 name="staat">
-              dealog für den staat
-            </h3>
+          <div class="text-lg text-center text-gray-400 uppercase sm:text-xs">
+            <h3 name="staat">dealog für den staat</h3>
           </div>
-          <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+          <h2 class="text-3xl font-semibold text-center sm:text-2xl">
             Dezentrale Erstellung und zentrale Veröffentlichung offizieller
             Informationen
           </h2>
           <div
-            class="mt-8 sm:mt-20 block sm:flex space-y-8 sm:space-y-0 space-x-0 sm:space-x-8"
+            class="block mt-8 sm:mt-20 sm:flex space-y-8 sm:space-y-0 space-x-0 sm:space-x-8"
           >
-            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
+            <div class="flex flex-col items-center w-full sm:block sm:w-1/3">
               <div>
                 <img src="images/one_voice_policy.svg" alt="One-Voice Policy" />
               </div>
-              <h4 class="mt-8 text-2xl sm:text-base font-medium">
+              <h4 class="mt-8 text-2xl font-medium sm:text-base">
                 One-Voice Policy
               </h4>
-              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+              <p class="px-4 mt-4 text-lg text-gray-700 sm:px-0 sm:text-sm">
                 Die Aufbereitung der Informationen im digitalen
                 DEalog-Backoffice erfolgt auf Seiten der öffentlichen Verwaltung
                 dezentral in den Fachabteilungen, wie zum Beispiel dem
@@ -363,14 +355,14 @@
                 von derselben herausgebenden Stelle, zum Beispiel der Stadt A.
               </p>
             </div>
-            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
+            <div class="flex flex-col items-center w-full sm:block sm:w-1/3">
               <div>
                 <img src="images/traceability.svg" alt="Nachvollziehbarkeit" />
               </div>
-              <h4 class="mt-8 text-2xl sm:text-base font-medium">
+              <h4 class="mt-8 text-2xl font-medium sm:text-base">
                 Nachvollziehbarkeit
               </h4>
-              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+              <p class="px-4 mt-4 text-lg text-gray-700 sm:px-0 sm:text-sm">
                 Das DEalog-Backoffice unterstützt die herausgebenden Stellen
                 darin, den Überblick über aktive Meldungen und deren
                 Verbreitungsgebiet zu behalten. Meldungen mit gegenseitigem
@@ -380,14 +372,14 @@
                 abgebildet.
               </p>
             </div>
-            <div class="flex flex-col items-center sm:block w-full sm:w-1/3">
+            <div class="flex flex-col items-center w-full sm:block sm:w-1/3">
               <div>
                 <img src="images/dashboard.svg" alt="Zentrales Dashboard" />
               </div>
-              <h4 class="mt-8 text-2xl sm:text-base font-medium">
+              <h4 class="mt-8 text-2xl font-medium sm:text-base">
                 Zentrales Dashboard
               </h4>
-              <p class="mt-4 px-4 sm:px-0 text-lg sm:text-sm text-gray-700">
+              <p class="px-4 mt-4 text-lg text-gray-700 sm:px-0 sm:text-sm">
                 In einer zentralen Übersicht im DEalog-Backoffice werden alle
                 Meldungen der herausgebenden Stelle und ihr derzeitiger Status
                 dargestellt. Die Anzeige von Öffnungsraten der einzelnen
@@ -397,20 +389,18 @@
             </div>
           </div>
           <div class="mt-4 text-center sm:text-right">
-            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
+            <a href="#top" class="text-lg underline sm:text-sm">Zum Anfang</a>
           </div>
         </div>
         <div class="mt-12 sm:mt-40">
-          <div class="uppercase text-gray-400 text-lg sm:text-xs text-center">
-            <h3 name="projekt">
-              project dealog
-            </h3>
+          <div class="text-lg text-center text-gray-400 uppercase sm:text-xs">
+            <h3 name="projekt">project dealog</h3>
           </div>
-          <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+          <h2 class="text-3xl font-semibold text-center sm:text-2xl">
             Top20 Projekt beim<br />#WirVsVirus-Hackathon
           </h2>
           <div
-            class="mt-8 px-4 sm:px-0 sm:mt-20 w-full sm:w-1/2 mx-auto text-lg sm:text-sm space-y-4"
+            class="w-full px-4 mx-auto mt-8 text-lg sm:px-0 sm:mt-20 sm:w-1/2 sm:text-sm space-y-4"
           >
             <p>
               Im März 2020 fanden wir uns im Rahmen des #WirVsVirus-Hackathons
@@ -430,9 +420,7 @@
               Mehr zum Hackathon
               <a href="https://wirvsvirus.org" class="underline">hier</a>.
             </p>
-            <h4 class="mt-8 font-medium">
-              Solution Enabler Programm
-            </h4>
+            <h4 class="mt-8 font-medium">Solution Enabler Programm</h4>
             <p>
               Im Nachgang zum Hackathon konnten wir unsere Lösung im Rahmen des
               SEP weiter vorantreiben. Zudem haben wir eine Förderung des
@@ -461,36 +449,36 @@
             </p>
           </div>
           <div class="mt-4 text-center sm:text-right">
-            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
+            <a href="#top" class="text-lg underline sm:text-sm">Zum Anfang</a>
           </div>
         </div>
 
         <div
-          class="max-w-screen-xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24"
+          class="px-4 py-12 mx-auto text-center max-w-screen-xl sm:px-6 lg:px-8 lg:py-24"
         >
           <div class="space-y-8 sm:space-y-12">
             <div
               class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl"
             >
               <a name="team"></a>
-              <h2 class="text-3xl sm:text-2xl font-semibold text-center">
+              <h2 class="text-3xl font-semibold text-center sm:text-2xl">
                 Das Team
               </h2>
-              <p class="text-sm leading-7 text-gray-500">
+              <p class="text-sm text-gray-500 leading-7">
                 Die folgenden Personen waren und/oder sind Teil des DEalog
                 Teams.
               </p>
             </div>
-            <ul class="mx-auto flex flex-wrap justify-center">
+            <ul class="flex flex-wrap justify-center mx-auto">
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/bertrand_atemkeng.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Bertrand Ndobegang Atemkeng</h4>
                       <p class="text-xs text-gray-600">Software Entwickler</p>
                     </div>
@@ -519,14 +507,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/christian_fischbach.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Christian Fischbach</h4>
                       <p class="text-xs text-gray-600">PR</p>
                     </div>
@@ -572,14 +560,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/thomas_gaiser.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Thomas Gaiser</h4>
                       <p class="text-xs text-gray-600">Produktmanager</p>
                     </div>
@@ -608,14 +596,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/johannes_gerber.png"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Johannes Gerber</h4>
                       <p class="text-xs text-gray-600">UI/UX Designer</p>
                     </div>
@@ -642,14 +630,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/andreas_gross.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Andreas Gross</h4>
                       <p class="text-xs text-gray-600">Software Entwickler</p>
                     </div>
@@ -678,14 +666,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="https://eu.ui-avatars.com/api/?name=Kevin+Horst"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Kevin Horst</h4>
                       <p class="text-xs text-gray-600">
                         Software Entwickler / DevOps
@@ -716,14 +704,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/markus_mueller-schickora.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Markus Mueller-Schikora</h4>
                       <p class="text-xs text-gray-600">Initiator</p>
                     </div>
@@ -769,14 +757,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/rainer_sax.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Rainer Sax</h4>
                       <p class="text-xs text-gray-600">UX</p>
                     </div>
@@ -805,14 +793,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/merve_semsar.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Merve Semsar</h4>
                       <p class="text-xs text-gray-600">UI/UX</p>
                     </div>
@@ -841,14 +829,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/florian_schuessel.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Florian Schüssel</h4>
                       <p class="text-xs text-gray-600">
                         Software Entwickler / DevOps
@@ -896,14 +884,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/clemens_tietze.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Clemens Tietze</h4>
                       <p class="text-xs text-gray-600">Software Entwickler</p>
                     </div>
@@ -932,14 +920,14 @@
                 </div>
               </li>
               <li class="m-2 xl:m-4">
-                <div class="space-y-6 w-56 h-64 xl:h-52">
+                <div class="w-56 h-64 space-y-6 xl:h-52">
                   <img
-                    class="mx-auto h-28 w-28 rounded-full xl:w-20 xl:h-20"
+                    class="mx-auto rounded-full h-28 w-28 xl:w-20 xl:h-20"
                     src="images/team/andreas_wuerl.jpg"
                     alt=""
                   />
                   <div class="space-y-2">
-                    <div class="text-lg leading-6 font-medium space-y-1">
+                    <div class="text-lg font-medium leading-6 space-y-1">
                       <h4>Andreas Würl</h4>
                       <p class="text-xs text-gray-600">Software Entwickler</p>
                     </div>
@@ -987,7 +975,7 @@
             </ul>
           </div>
           <div class="mt-4 text-center sm:text-right">
-            <a href="#top" class="text-lg sm:text-sm underline">Zum Anfang</a>
+            <a href="#top" class="text-lg underline sm:text-sm">Zum Anfang</a>
           </div>
         </div>
       </section>
@@ -995,14 +983,12 @@
     <footer class="mt-12 sm:mt-40">
       <div class="bg-gray-700">
         <div
-          class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
+          class="px-4 py-12 mx-auto max-w-screen-xl sm:px-6 lg:py-16 lg:px-8"
         >
           <div class="mx-4 sm:mx-40">
-            <div class="block sm:flex sm:justify-between text-gray-400 text-sm">
+            <div class="block text-sm text-gray-400 sm:flex sm:justify-between">
               <div>
-                <p>
-                  DEalog - ein Projekt des GovLab Arnsberg
-                </p>
+                <p>DEalog - ein Projekt des GovLab Arnsberg</p>
                 <h4 class="mt-8 font-semibold">Herausgeber</h4>
                 <div class="mt-4">
                   <p>Land Nordrhein-Westfalen</p>
@@ -1030,7 +1016,7 @@
             </div>
           </div>
           <div
-            class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between"
+            class="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between"
           >
             <div class="flex md:order-2">
               <a name="kontakt"></a>
@@ -1039,7 +1025,7 @@
                 class="ml-6 text-gray-400 hover:text-gray-300"
               >
                 <span class="sr-only">Twitter</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
                   />
@@ -1050,7 +1036,7 @@
                 class="ml-6 text-gray-400 hover:text-gray-300"
               >
                 <span class="sr-only">GitHub</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     fill-rule="evenodd"
                     d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
@@ -1060,7 +1046,7 @@
               </a>
             </div>
             <p
-              class="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1"
+              class="mt-8 text-base text-gray-400 leading-6 md:mt-0 md:order-1"
             >
               &copy; 2020 Das DEalog Team
             </p>
