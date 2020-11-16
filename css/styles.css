@@ -1467,16 +1467,8 @@ video {
     display: block;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:justify-between {
-    justify-content: space-between;
   }
 
   .lg\:max-w-5xl {
