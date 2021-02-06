@@ -3,38 +3,12 @@ name: Deploy
 on:
   workflow_run:
     workflows: ["Build"]
-    branches: [main, "DEV-*"]
+    branches: [main]
     types:
       - completed
 
 jobs:
-  deploy-dev:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    name: Deploy to Amazon S3 develop
-
-    env:
-      AWS_REGION: eu-central-1
-      S3_BUCKET: dev.dealog.de
-
-    steps:
-      - name: Download build artifacts
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          workflow: ${{ github.event.workflow_run.workflow_id }}
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
-
-      - name: Sync with S3
-        run: aws s3 sync ./website s3://${{ env.S3_BUCKET }} --delete
-
-  deploy-prod:
-    if: github.ref == 'refs/heads/main'
+  deploy:
     runs-on: ubuntu-latest
     name: Deploy to Amazon S3 production
 
