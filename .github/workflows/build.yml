@@ -3,6 +3,8 @@ name: Build
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
@@ -47,4 +49,3 @@ jobs:
             ./index.html
             ./manifest.json
             ./robots.txt
-
